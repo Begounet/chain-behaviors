@@ -1,0 +1,16 @@
+{
+  "name": "com.apperture.chain-behaviors",
+  "displayName": "Chain Behaviors",
+  "description": "A set of components allowing to make common operations via generic components instead of rewriting little specific scripts",
+  "version": "1.0.0",
+  "unity": "2019.3",
+  "license": "MIT",
+  "licensesUrl": "https://gitea.apperture.fr:62/Apperture/chain-behaviors/License",
+  "changelogUrl": "https://gitea.apperture.fr:62/Apperture/chain-behaviors/Documentation~/changelog.md",
+  "documentationUrl": "https://gitea.apperture.fr:62/Apperture/chain-behaviors/ReadMe.md",
+  "author": {
+    "name": "Arnaud Begue",
+    "url": "https://twitter.com/ABegounet"
+  },
+  "type": "tool"
+}
