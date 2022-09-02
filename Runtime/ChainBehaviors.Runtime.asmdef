@@ -1,0 +1,49 @@
+{
+    "name": "ChainBehaviors.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "AppTools.Runtime",
+        "UniTask",
+        "AdvUnityEvent.Runtime",
+        "ScriptableObject-Architecture",
+        "SOArchitectureExtras-Runtime",
+        "InterfacesPropertyDrawer.Runtime",
+        "Unity.XR.Management",
+        "Unity.RenderPipelines.Universal.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.management",
+            "expression": "4.2.1",
+            "define": "USE_XR_MANAGEMENT"
+        },
+        {
+            "name": "com.unity.render-pipelines.universal",
+            "expression": "12.1.0",
+            "define": "USE_URP"
+        },
+        {
+            "name": "com.apperture.interface-property-drawer",
+            "expression": "1.0.0",
+            "define": "USE_INTERFACE_PROPERTY_DRAWER"
+        },
+        {
+            "name": "com.darktable.savwav",
+            "expression": "1.0.0",
+            "define": "USE_DARKTABLE_SAVWAV"
+        },
+		{
+            "name": "com.unity.localization",
+            "expression": "1.0.0",
+            "define": "USE_UNITY_LOCALIZATION"
+        }
+    ],
+    "noEngineReferences": false
+}
