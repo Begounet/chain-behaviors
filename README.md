@@ -18,7 +18,7 @@ A set of components allowing to make common operations via generic components in
 
 ## Concept
 
-The main concept to catch behind the Chain Behaviors is that each one component make a little task and forward its result (or not) to another component to make a chain of behavior to execute.
+The main concept to catch behind the Chain Behaviors is that each component makes a little task and forward its result (or not) to another component to make a chain of behavior to execute.
 
 ![](Documentation~/Resources/Concept01.gif)
 
