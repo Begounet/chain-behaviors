@@ -2,17 +2,23 @@
 using Darktable;
 using UnityEngine;
 using System.IO;
+using AUE;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Audio
 {
-    public class AudioAmplitudesToWaveData : MonoBehaviour
+    /// <summary>
+    /// Convert audio raw samples (float[]) to WAV data (byte[])
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleAudioPath + nameof(AudioAmplitudesToWaveData))]
+    public class AudioAmplitudesToWaveData : BaseMethod
     {
         [SerializeField]
-        private ByteArrayUnityEvent _processed = null;
-
+        private AUEEvent<byte[]> _processed = null;
 
         public void Process(float[] data)
         {
+            Trace();
             _processed.Invoke(ToWavData(data));
         }
 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using AUE;
 using System;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors
 {

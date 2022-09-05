@@ -1,10 +1,14 @@
 using AUE;
+using ChainBehaviors.Utils;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace ChainBehaviors
+namespace ChainBehaviors.Image
 {
-    [AddComponentMenu(CBConstants.ModuleImagePath + nameof(Texture2DEncoder))]
+    /// <summary>
+    /// Encode a Texture2D as byte[] (jpg, png etc.)
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleImagePath + "Texture2D Encoder")]
     public class Texture2DEncoder : BaseMethod
     {
         public enum EFormat

@@ -1,6 +1,6 @@
 using System;
 
-namespace ChainBehaviors
+namespace ChainBehaviors.Utils
 {
     /// <summary>
     /// Allow to decrease defensive code. It also supports UnityEngine.Object null check.

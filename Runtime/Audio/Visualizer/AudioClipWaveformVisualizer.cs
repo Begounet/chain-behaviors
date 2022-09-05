@@ -10,6 +10,7 @@ using Cysharp.Threading.Tasks;
 using ScriptableObjectArchitecture;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Audio.Visualizer
 {

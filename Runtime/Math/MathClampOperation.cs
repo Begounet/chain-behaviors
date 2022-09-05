@@ -1,10 +1,12 @@
 using AUE;
+using ChainBehaviors.Utils;
 using System;
 using UnityEngine;
 
 namespace ChainBehaviors.Math
 {
-    public class MathClampOperation : MonoBehaviour
+    [AddComponentMenu(CBConstants.ModuleMath + "Math Clamp Operation")]
+    public class MathClampOperation : BaseMethod
     {
         [Flags]
         public enum EOperationMask
@@ -31,6 +33,7 @@ namespace ChainBehaviors.Math
 
         public void Clamp(float value)
         {
+            Trace(("value", value), ("min", _minValue), ("max", _maxValue));
             if (_clampOperation.HasFlag(EOperationMask.Min))
             {
                 value = Mathf.Max(value, _minValue);
@@ -44,6 +47,7 @@ namespace ChainBehaviors.Math
 
         public void Clamp(int value)
         {
+            Trace(("value", value), ("min", _minValue), ("max", _maxValue));
             if (_clampOperation.HasFlag(EOperationMask.Min))
             {
                 value = Mathf.Min(value, (int) _minValue);

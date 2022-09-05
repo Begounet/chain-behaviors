@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using AUE;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors
 {

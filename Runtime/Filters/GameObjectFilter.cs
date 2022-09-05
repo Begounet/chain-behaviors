@@ -1,8 +1,9 @@
+using ChainBehaviors.Utils;
 using UnityEngine;
 
 namespace ChainBehaviors.Filters
 {
-    [AddComponentMenu("ChainBehaviors/Filters/GameObject")]
+    [AddComponentMenu(CBConstants.ModuleFiltersPath + "GameObject Filter")]
     public class GameObjectFilter : BaseFilter<GameObject>
     {
     

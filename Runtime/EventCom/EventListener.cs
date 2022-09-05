@@ -1,4 +1,5 @@
 using AUE;
+using ChainBehaviors.Utils;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ namespace ChainBehaviors.EventCom
     /// Subscription is based on the active state of the MonoBehavior.
     /// </summary>
     /// <seealso cref="EventNotifier"/>
+    [AddComponentMenu(CBConstants.ModuleEventComPath + "Event Listener")]
     public class EventListener : BaseMethod
     {
         [SerializeField]

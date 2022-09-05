@@ -3,6 +3,7 @@ using Sirenix.OdinInspector;
 #endif
 using UnityEngine;
 using AUE;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Proxy
 {

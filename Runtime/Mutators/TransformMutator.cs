@@ -1,7 +1,12 @@
+using ChainBehaviors.Utils;
 using UnityEngine;
 
-namespace ChainBehaviors.Math
+namespace ChainBehaviors.Mutators
 {
+    /// <summary>
+    /// Applies modification on a <see cref="Transform"/>
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleMutatorsPath + "Transform Mutator")]
     public class TransformMutator : BaseMethod
     {
         [SerializeField]

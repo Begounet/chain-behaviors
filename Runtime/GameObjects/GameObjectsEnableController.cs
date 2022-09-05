@@ -1,3 +1,4 @@
+using ChainBehaviors.Utils;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -7,6 +8,7 @@ namespace ChainBehaviors
     /// <summary>
     /// Enable/disable easily multiple GameObjects
     /// </summary>
+    [AddComponentMenu(CBConstants.ModuleGameObjects + "GameObjects Enable Controller")]
     public class GameObjectsEnableController : BaseMethod
     {
         [SerializeField, FormerlySerializedAs("_targets")]

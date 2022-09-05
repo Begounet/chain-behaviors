@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.Serialization;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors
 {

@@ -1,10 +1,15 @@
 ﻿using AUE;
+using ChainBehaviors.Utils;
 using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 
 namespace ChainBehaviors.Events
 {
+    /// <summary>
+    /// Trigger <see cref="MonoBehaviour"/> life cycle events (Start, OnEnable, OnDestroy etc.)
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleEventsPath + "MonoBehavior Life Cycle Events")]
     public class MonoBehaviorLifeCycleEvents : BaseMethod
     {
         [Flags]

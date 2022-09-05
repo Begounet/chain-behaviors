@@ -1,7 +1,12 @@
+using ChainBehaviors.Utils;
 using UnityEngine;
 
 namespace ChainBehaviors.Processes
 {
+    /// <summary>
+    /// Move and scale a plane transform so its match the camera near/far plane at the desired distance.
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleProcessors + "Camera Plane Attach Process")]
     [ExecuteInEditMode]
     public class CameraPlaneAttachProcess : BaseProcess
     {

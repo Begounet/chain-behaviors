@@ -2,9 +2,14 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using System.Linq;
 using AUE;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Math
 {
+    /// <summary>
+    /// Triggers events according to a floating value reaching some thresholds.
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleMath + "Float Threshold")]
     public class FloatThreshold : BaseMethod
     {
         [System.Serializable]

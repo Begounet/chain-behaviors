@@ -1,9 +1,11 @@
 ﻿using AUE;
+using ChainBehaviors.Utils;
 using UnityEngine;
 
 namespace ChainBehaviors.Extractors
 {
-    public class ExtractAudioClipName : MonoBehaviour
+    [AddComponentMenu(CBConstants.ModuleExtractorsPath + "Extract Audio Clip Name")]
+    public class ExtractAudioClipName : BaseMethod
     {
         [SerializeField]
         private string _defaultText = string.Empty;
@@ -28,6 +30,7 @@ namespace ChainBehaviors.Extractors
             {
                 clipName = _defaultText;
             }
+            Trace(("clip", clip), ("name", clipName));
             _onExtracted.Invoke(clipName);
         }
     }

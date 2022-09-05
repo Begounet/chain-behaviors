@@ -1,4 +1,6 @@
 #if USE_UNITY_LOCALIZATION
+using AUE;
+using ChainBehaviors.Utils;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,10 +9,14 @@ using UnityEngine.Localization.Settings;
 
 namespace ChainBehaviors.Localization
 {
+    /// <summary>
+    /// Allow to act on the Localization system (like changing localization culture)
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleLocalization + "Localization Controller")]
     public class LocalizationController : BaseMethod
     {
         [SerializeField]
-        private UnityEvent _onLocalizationCultureChanged;
+        private AUEEvent _onLocalizationCultureChanged;
 
         private bool _lockLocaleChangedNotification = false;
 

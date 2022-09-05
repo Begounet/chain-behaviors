@@ -1,9 +1,14 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 using AUE;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Math
 {
+    /// <summary>
+    /// Tell which threshold (index) has been reached by a floating value.
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleMath + "Float Step Indexer")] 
     public class FloatStepIndexer : BaseMethod
     {
         [SerializeField]

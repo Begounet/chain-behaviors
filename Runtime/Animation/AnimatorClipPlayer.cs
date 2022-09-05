@@ -2,6 +2,7 @@ using Sirenix.OdinInspector;
 using AppTools;
 using UnityEngine;
 using UnityEngine.Assertions;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors
 {

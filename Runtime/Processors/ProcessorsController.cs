@@ -1,9 +1,15 @@
-﻿using Sirenix.OdinInspector;
+﻿using ChainBehaviors.Utils;
+using Sirenix.OdinInspector;
 using System.Collections;
 using UnityEngine;
 
 namespace ChainBehaviors.Processes
 {
+    /// <summary>
+    /// Run a list of processes (calling their <see cref="BaseProcess.ExecuteProcess"/>).
+    /// The processes must be active to be updated.
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleProcessors + "Processor Controller")]
     public class ProcessorsController : BaseMethod
     {
         [SerializeField]

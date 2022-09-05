@@ -1,8 +1,15 @@
 ﻿using AUE;
+using ChainBehaviors.Utils;
 using UnityEngine;
 
 namespace ChainBehaviors.Math
 {
+    /// <summary>
+    /// Remap a float from a range to another one.
+    /// If min = -1, max = 1 and newMin = 0 and newMax = 1,
+    /// then when value = 0, result = 0.5f
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleMath + "Float Remapper")]
     public class FloatRemapper : BaseMethod
     {
         [SerializeField]

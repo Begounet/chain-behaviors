@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using AUE;
 using ChainBehaviors.Proxy;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Processes
 {
+    [AddComponentMenu(CBConstants.ModuleProcessors + "Extract Audio Clip Time Process")]
     public class ExtractAudioClipTimeProcess : BaseProcess
     {
         [SerializeField]

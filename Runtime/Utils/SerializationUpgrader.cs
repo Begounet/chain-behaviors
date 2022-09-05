@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEditor;
 #endif
 
-namespace ChainBehaviors
+namespace ChainBehaviors.Utils
 {
     public static class SerializationUpgrader
     {

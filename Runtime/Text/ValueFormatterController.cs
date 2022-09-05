@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using AUE;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Text
 {
     /// <summary>
     /// Convert a value to string according to the specific format, and call "Executed" when completed.
     /// </summary>
+    [AddComponentMenu(CBConstants.ModuleTextPath + "Value Formatter Controller")]
     public class ValueFormatterController : BaseMethod
     {
         [SerializeField]

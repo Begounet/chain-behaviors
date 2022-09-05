@@ -6,10 +6,15 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using AUE;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Audio
 {
-    public class PrependWaveHeader : MonoBehaviour
+    /// <summary>
+    /// Prepend WAV header to some WAV data so the WAV structure is completed.
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleAudioPath + "Prepend WAV header"))]
+    public class PrependWaveHeader : BaseMethod
     {
         [SerializeField]
         private bool _useAudioOutputFrequency = false;
@@ -25,8 +30,10 @@ namespace ChainBehaviors.Audio
         private AUEEvent<byte[]> _processed = null;
 
 
-        public void Process(IEnumerable<byte> data)
+        public void Execute(IEnumerable<byte> data)
         {
+            Trace();
+
             int dataCount = data.Count();
             byte[] wavData = new byte[SavWav.HeaderSize + dataCount];
             var dataEnumerator = data.GetEnumerator();

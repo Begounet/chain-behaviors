@@ -2,9 +2,16 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 using AppTools;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors
 {
+    /// <summary>
+    /// Enable/disable GameObject child according to an index.
+    /// Only one child can be activated. 
+    /// Useful to make a tab system in UI.
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleGameObjects + "GameObject Switcher")]
     public class GameObjectSwitcher : BaseMethod
     {
         [SerializeField]

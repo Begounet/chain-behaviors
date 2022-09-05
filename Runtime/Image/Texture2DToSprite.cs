@@ -1,9 +1,13 @@
 using AUE;
 using UnityEngine;
+using ChainBehaviors.Utils;
 
-namespace ChainBehaviors
+namespace ChainBehaviors.Image
 {
-    [AddComponentMenu(CBConstants.ModuleImagePath + nameof(Texture2DToSprite))]
+    /// <summary>
+    /// Convert a <see cref="Texture2D"/> to a <see cref="Sprite"/>
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleImagePath + "Texture2D to Sprite")]
     public class Texture2DToSprite : BaseMethod
     {
         [SerializeField]

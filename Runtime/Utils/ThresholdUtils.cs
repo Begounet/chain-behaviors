@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ChainBehaviors
+namespace ChainBehaviors.Utils
 {
+    /// <summary>
+    /// Helper class for thresholds sorting
+    /// </summary>
     public static class ThresholdUtils
     {
         public static bool IsSortedAscending<T>(IEnumerable<T> source) where T : IComparable<T>

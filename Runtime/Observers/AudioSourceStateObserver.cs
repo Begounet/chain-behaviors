@@ -1,10 +1,15 @@
 ﻿using AUE;
 using ChainBehaviors.Proxy;
+using ChainBehaviors.Utils;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace ChainBehaviors.Observers
 {
+    /// <summary>
+    /// Observes the play state changes in an <see cref="AudioSource"/>
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleObservers + "Audio Source State Observer")]
     public class AudioSourceStateObserver : BaseMethod
     {
         [SerializeField]

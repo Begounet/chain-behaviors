@@ -4,9 +4,9 @@ using ScriptableObjectArchitecture;
 namespace ChainBehaviors.SOArchitecture
 {
     [System.Serializable]
-	public sealed class TargetFramerateUpdateProcessorReference : BaseReference<TargetFramerateUpdateProcessor, TargetFramerateUpdateProcessorVariable, TargetFramerateUpdateProcessorVariableComponent>
+	public sealed class TargetFramerateUpdateProcessorReference : BaseReference<TargetFramerateUpdateProcess, TargetFramerateUpdateProcessorVariable, TargetFramerateUpdateProcessorVariableComponent>
 	{
 	    public TargetFramerateUpdateProcessorReference() : base() { }
-	    public TargetFramerateUpdateProcessorReference(TargetFramerateUpdateProcessor value) : base(value) { }
+	    public TargetFramerateUpdateProcessorReference(TargetFramerateUpdateProcess value) : base(value) { }
 	}
 }

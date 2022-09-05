@@ -1,9 +1,14 @@
 using AUE;
+using ChainBehaviors.Utils;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace ChainBehaviors.UI
 {
+    /// <summary>
+    /// Forward UI events (onPointerEnter, onPointerMove etc.)
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleUIPath + "Pointer Interactable Area")]
     public class PointerInteractableArea : BaseMethod, 
         IPointerEnterHandler, IPointerDownHandler, IPointerClickHandler, 
         IPointerMoveHandler, IPointerUpHandler, IPointerExitHandler

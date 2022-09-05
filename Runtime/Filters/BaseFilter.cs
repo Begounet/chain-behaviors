@@ -16,6 +16,9 @@ namespace ChainBehaviors.Filters
         protected EFilterMode _filterMode = EFilterMode.Equals;
     }
 
+    /// <summary>
+    /// Trigger an event if the value passes the filter condition
+    /// </summary>
     public abstract class BaseFilter<TFilterIdentifier> : BaseFilter
     {
         [Serializable]

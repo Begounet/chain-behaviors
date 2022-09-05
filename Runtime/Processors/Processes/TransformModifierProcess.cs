@@ -1,9 +1,14 @@
-﻿using Sirenix.OdinInspector;
+﻿using ChainBehaviors.Utils;
+using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 
 namespace ChainBehaviors.Processes
 {
+    /// <summary>
+    /// Applies transform modification each frame
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleProcessors + "Transform Modifier Process")]
     public class TransformModifierProcess : BaseProcess
     {
         [Flags]

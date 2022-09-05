@@ -1,9 +1,14 @@
 ﻿using AUE;
+using ChainBehaviors.Utils;
 using UnityEngine;
 
 namespace ChainBehaviors.Observers
 {
-    public class CollisionEventsObserver : MonoBehaviour
+    /// <summary>
+    /// Notifies trigger and collision events
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleObservers + "Collision Events Observer")]
+    public class CollisionEventsObserver : BaseMethod
     {
         [System.Serializable]
         public class TriggerEvents
@@ -54,12 +59,28 @@ namespace ChainBehaviors.Observers
         private CollisionEvents _collisionEvents = null;
 
 
-        private void OnTriggerEnter(Collider other) => _triggerEvents.OnTriggerEnter.Invoke(other);
+        private void OnTriggerEnter(Collider other)
+        {
+            TraceCustomMethodName("OnTriggerEnter", ("other", other.gameObject));
+            _triggerEvents.OnTriggerEnter.Invoke(other);
+        }
 
-        private void OnTriggerExit(Collider other) => _triggerEvents.OnTriggerExit.Invoke(other);
+        private void OnTriggerExit(Collider other)
+        {
+            TraceCustomMethodName("OnTriggerExit", ("other", other.gameObject));
+            _triggerEvents.OnTriggerExit.Invoke(other);
+        }
 
-        private void OnCollisionEnter(Collision collision) => _collisionEvents.OnCollisionEnter.Raise(collision);
+        private void OnCollisionEnter(Collision collision)
+        {
+            TraceCustomMethodName("OnCollisionEnter", ("other", collision.gameObject));
+            _collisionEvents.OnCollisionEnter.Raise(collision);
+        }
 
-        private void OnCollisionExit(Collision collision) => _collisionEvents.OnCollisionExit.Raise(collision);
+        private void OnCollisionExit(Collision collision)
+        {
+            TraceCustomMethodName("OnCollisionExit", ("other", collision.gameObject));
+            _collisionEvents.OnCollisionExit.Raise(collision);
+        }
     }
 }

@@ -2,6 +2,7 @@ using AUE;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Proxy
 {

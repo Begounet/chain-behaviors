@@ -1,5 +1,6 @@
 using AUE;
 using UnityEngine;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Proxy
 {

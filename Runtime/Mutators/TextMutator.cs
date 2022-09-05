@@ -4,10 +4,15 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 using AUE;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Mutators
 {
-    public class TextMutator : MonoBehaviour
+    /// <summary>
+    /// Apply some modifications to a string
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleMutatorsPath + "Text Mutator")]
+    public class TextMutator : BaseMethod
     {
         [Flags]
         public enum EPathMask
@@ -47,7 +52,9 @@ namespace ChainBehaviors.Mutators
 
         public void MutateText(string text)
         {
-            _mutated.Invoke(InternalMutateText(text));
+            string mutatedText = InternalMutateText(text);
+            Trace(("original text", text), ("mutated text", mutatedText));
+            _mutated.Invoke(mutatedText);
         }
 
         private string InternalMutateText(string text)

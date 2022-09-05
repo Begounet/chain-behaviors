@@ -1,16 +1,22 @@
+using ChainBehaviors.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Utilities.ChainBehaviors
+namespace ChainBehaviors
 {
-    public class UnityEngineApplicationInterface : MonoBehaviour
+    /// <summary>
+    /// Interface to act on <see cref="UnityEngine.Application"/>
+    /// </summary>
+    [AddComponentMenu(CBConstants.ModuleMiscs + "UnityEngine Application (interface)")]
+    public class UnityEngineApplicationInterface : BaseMethod
     {
-        public string BuildVersion => UnityEngine.Application.version;
+        public string BuildVersion => Application.version;
 
         public void ExitApplication()
         {
-            UnityEngine.Application.Quit();
+            TraceCustomMethodName("Exit Application");
+            Application.Quit();
         }
     }
 }

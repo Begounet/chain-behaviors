@@ -49,9 +49,14 @@ You may also want to be careful about the number of GameObjects you are going to
 * Animation
   * `AnimatorClipPlayer`: Allow to play a specific clip on an Animator
   * `SetAnimatorParameter`: Provide a way to feed an Animator parameter via "Submit*" methods
+  
 * Audio
   * `AudioClipWaveformVisualizer`: Generate a texture representing an `AudioClip` waveform
   * `AudioListenerCaptureController`: Capture the audio from an `AudioListener` in a file
+  * `AudioAmplitudesToWavData`: Convert audio raw samples (float[]) to WAV data (byte[])
+  * `AudioSamplesToWavData`: Convert audio samples file to WAV data
+  * `PrependWaveHeader`: Prepend WAV header to some WAV data so the WAV structure is completed
+  
 * Controls
   * Branch
     * `If`
@@ -65,19 +70,113 @@ You may also want to be careful about the number of GameObjects you are going to
   * `Gradient Color Setter`: trigger an event with a color from a gradient color, according to the normalized value passed as argument
   * `Instance Synchronizator`: instantiates a prefab attached to a GameObject. Not really a behavior, more than an utility class.
   * `Once Per Application Run`: trigger an event only once in an application run
+  
+* EventCom: use `EventListener` and `EventNotifier` to setup an event communication system.
+
+  * `EventListener`: listen a `Event Notifier`
+  * `EventNotifier`: allow to trigger an event that will be forwarded to subscribed `EventListener`s
+
+* Events
+
+  * `MonoBehaviorLifeCycleEvents`: triggers common MonoBehavior events (like `Start`, `OnEnable`, `OnDestroy` etc.). (better with Odin Inspector)
+
+* Extractors: their specialization is to extract data from a data source and forward its results with an event.
+
+  * `ExtractAudioClipName`: forward the clip name of an `AudioClip`. Useful to display audio title in a UI.
+
+* Filters: triggers event if the value passes the filter
+
+  * `GameObjectFilter`
+  * `ObjectHandleFilter`: really useful when using `ObjectHandle` as enum
+
+* GameObjects
+
+  * `GameObjectsEnableController`: enable/disable easily several GameObjects from a bool. Make it easy to toggle GameObjects.
+  * `GameObjectSwitcher`: enable/disable GameObject child according to an index. Only one child can be activated. Useful to make a tab system in UI.
+
+* Image
+
+  * `Texture2DEncoder`: encode a `Texture2D` as `byte[]` (jpg, png etc.). Combine with `ByteBufferToFile` to save it as a file.
+  * `Texure2DToSprite`: convert a `Texture2D` to a `Sprite`
+
 * Graphics
+  
   * `Graphics Settings Controller`: allow to change graphics settings
+  
 * IO
   * `Byte Buffer To File`: save a byte[] to a file
   * `Directory Deleter`
   * `File Stream Creator`
   * `Object To Asset`: save a `UnityEngine.Object` as an asset (editor only)
+  
+* Localization
+
+  * `LocalizationController`: allow to act on the Localization system (like changing localization culture)
+  * `LocalizedStringSetter`: forward a `LocalizedString` set. If `LocalizedString` is empty, another event is raised, allowing to update UI in consequence for example.
+  * `LocalizeStringArgumentSetter`: set an argument to a `LocalizedString`
+
+* Math
+
+  * Mathematic operations : make simple calculus (+, -, *, /, %) between 2 values. Values can be dynamics, constants or both (most of the time).
+    * `MathFloatOperation`: float version
+    * `MathIntOperation`: int version
+  * `FloatRemapper`: remap a float value from a range to another one.
+  * `FloatStepIndexer`: tell which threshold (index) has been reached by a floating value.
+  * `FloatThreshold`: triggers events according to a floating value reaching some thresholds.
+  * `MathClampOperation`: allow to clamp int and float values.
+
 * Microphone
+  
   * `Microphone Capture Controller`: record the microphone and save it to a file
+  
+* Miscs
+
+  * `UnityEngineApplicationInterface`: allow to act on `UnityEngine.Application`.
+
+* Mutators
+
+  * `TextMutator`: applies modifications on a string. Useful to truncate a string for example.
+  * `TransformMutator`: applies modifications on a `Transform`.
+  * `ColorAlphaMutator`: set the alpha of a color
+
+* Observers
+
+  * `AudioSourceStateObserver`: observes the play state changes in an `AudioSource`
+  * `CollisionEventsObserver`: notifies trigger and collision events
+
+* Processors
+
+  * `ProcessorsController`: run a list of processes.
+  * Processes
+    * `CameraPlaneAttachProcess`: move and scale a plane transform so its match the camera near/far plane at the desired distance.
+    * `ExtractAudioClipTimeProcess`: really useful to make a progress bar (with a slider) for an audio being played.
+    * `GenericUpdateProcess`: forward an update (passing by the delta time). Can be used to interact with more native behaviors.
+    * `TargetFramerateUpdateProcess`: execute event at a specific framerate
+    * `TargetTimeIntervalUpdateProcess`: execute event each interval seconds
+    * `TransformModifierProcess`: applies transform modification each frame.
+
 * Proxies
   * Events: they allow to forward or group events calls. They are mainly used to put things in order or convert a `UnityEvent` to an `AUEEvent`
   * UnityObjectProxy: allow to bind a GameObject as a direct reference or from a prefab
+  
+* RefCounterController
+
+  * `RefCounterController`: keep reference count and trigger event in consequences. Useful when multiple sources try to act on the same thing. For example, you have 2 toggles that enable one GameObject. If one is turned off, you would like to keep the GameObject enabled since it still has 1 toggle enabled (ref count = 1). Turning off the last toggle will set ref count = 0 and so the adapted event will be notified in consequence.
+
+* Text
+
+  * `Printer`: log a value or a message. Useful to display debug values or trace.
+
+    If you need to check if a button click has really been performed, just call `Printer.Log` to ensure it!
+
+  * `ValueFormatterController`: create a string from the value applied on a specific format
+
+* UI
+
+  * `PointerInteractableArea`: forward UI events (onPointerEnter, onPointerMove etc.)
+
 * XR
+  
   * `VR Mode Watcher`: at start, trigger an event telling if VR is enabled.
 
 ---
