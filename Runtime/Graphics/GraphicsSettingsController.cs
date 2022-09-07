@@ -3,6 +3,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Graphics
 {
