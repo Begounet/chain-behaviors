@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.1
+
+**Added**
+
+- `StringKeeper`
+- `SmartStringFormatter`
+- `LocalizeStringAccessor`
+- Smart String sources
+  - `StringKeeperSource`
+  - `BaseVariableComponentSource`
+
 ## 1.1.0
 
 ### Added

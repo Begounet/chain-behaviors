@@ -19,6 +19,7 @@ namespace ChainBehaviors.Utils
         public const string ModuleFiltersPath = ModulePath + "Filters/";
         public const string ModuleGameObjects = ModulePath + "GameObjects/";
         public const string ModuleLocalization = ModulePath + "Localization/";
+        public const string ModuleSmartString = ModuleLocalization + "Smart String/";
         public const string ModuleMath = ModulePath + "Math/";
         public const string ModuleMiscs = ModulePath + "Miscs/";
         public const string ModuleMutatorsPath = ModulePath + "Mutators/";

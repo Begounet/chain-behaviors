@@ -1,7 +1,6 @@
 #if USE_UNITY_LOCALIZATION
 using UnityEngine;
 using UnityEngine.Localization.Components;
-using UnityEngine.Events;
 using UnityEngine.Localization;
 using System.Collections.Generic;
 using AUE;
@@ -19,7 +18,7 @@ namespace ChainBehaviors.Localization
     public class LocalizedStringArgumentSetter : BaseMethod
     {
         [SerializeField]
-        private AUEEvent<LocalizedString> _localizeStringEvent;
+        private LocalizeStringEvent _localizeStringEvent;
 
 #pragma warning disable 414 // Used in Editor
         [SerializeField, Tooltip("If false, serialized arguments can be set in edit mode")]

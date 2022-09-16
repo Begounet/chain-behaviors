@@ -113,7 +113,11 @@ You may also want to be careful about the number of GameObjects you are going to
 
   * `LocalizationController`: allow to act on the Localization system (like changing localization culture)
   * `LocalizedStringSetter`: forward a `LocalizedString` set. If `LocalizedString` is empty, another event is raised, allowing to update UI in consequence for example.
+  * `LocalizeStringAccessor`: provide a way to get the resulting string of a `LocalizeStringEvent`
   * `LocalizeStringArgumentSetter`: set an argument to a `LocalizedString`
+  * Smart String
+    * `SmartStringFormatter`: allow to format string from values sources, using power of SmartStrings
+
 
 * Math
 
@@ -170,6 +174,8 @@ You may also want to be careful about the number of GameObjects you are going to
     If you need to check if a button click has really been performed, just call `Printer.Log` to ensure it!
 
   * `ValueFormatterController`: create a string from the value applied on a specific format
+  * `StringKeeper`: hold a string. Useful to keep the result of a `LocalizeStringEvent`
+and re-use it later.
 
 * UI
 
