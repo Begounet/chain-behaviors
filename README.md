@@ -180,6 +180,8 @@ and re-use it later.
 * UI
 
   * `PointerInteractableArea`: forward UI events (onPointerEnter, onPointerMove etc.)
+  * Processes:
+    * `ScrollableLoopUI`: make an infinite scroll loop on a horizontal or vertical layout.
 
 * XR
   
