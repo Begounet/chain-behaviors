@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.2.1
+
+### Modified
+
+- `ScrollableLoopUI`: can wait for localization system to be initialized before operating
+
 ## 1.1.2
 
 ### Added

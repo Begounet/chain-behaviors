@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 namespace ChainBehaviors.UI
@@ -25,6 +26,13 @@ namespace ChainBehaviors.UI
 
         [SerializeField, Tooltip("Determines the speed and the direction of the motion")]
         private float _speed = 1;
+
+#if USE_UNITY_LOCALIZATION
+        [SerializeField]
+        [Tooltip("Since the size of items must be determined before initializing this component,\n" +
+            "check this to wait for the Localization system updating the children's texts")]
+	    private bool _waitForLocalizationInitialization = true;
+#endif
 
         private RectTransform _rootRect;
         private List<RectTransform> _items;
@@ -50,7 +58,16 @@ namespace ChainBehaviors.UI
         /// </summary>
         private async UniTask DelayedInitialization()
         {
-            await UniTask.Yield(PlayerLoopTiming.PostLateUpdate);
+#if USE_UNITY_LOCALIZATION
+            if (_waitForLocalizationInitialization)
+            {
+                await UniTask.WaitUntil(() => LocalizationSettings.HasSettings && LocalizationSettings.Instance.GetInitializationOperation().IsDone);
+            }
+            else
+#endif
+            {
+                await UniTask.Yield(PlayerLoopTiming.PreLateUpdate);
+            }
             Initialize();
         }
 
@@ -82,6 +99,7 @@ namespace ChainBehaviors.UI
                     _items.Add(itemInstance);
                 }
             }
+            LayoutRebuilder.MarkLayoutForRebuild(_rootRect);
         }
 
         private float GetBiggestItemAlignedSize()
