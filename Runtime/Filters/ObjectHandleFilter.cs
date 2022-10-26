@@ -4,7 +4,7 @@ using ChainBehaviors.Utils;
 
 namespace ChainBehaviors.Filters
 {
-    [AddComponentMenu(CBConstants.ModuleFiltersPath + "Object Handle")]
+    [AddComponentMenu(CBConstants.ModuleFiltersPath + "Object Handle Filter")]
     public class ObjectHandleFilter : BaseFilter<ObjectHandle>
     {
     }
