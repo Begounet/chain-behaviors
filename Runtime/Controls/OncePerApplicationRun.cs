@@ -1,5 +1,6 @@
 #if ODIN_INSPECTOR
 using AppTools;
+using ChainBehaviors.Utils;
 using Sirenix.OdinInspector;
 using System;
 using System.Linq;

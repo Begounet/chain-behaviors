@@ -3,6 +3,7 @@ using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 using AUE;
+using ChainBehaviors.Utils;
 
 namespace ChainBehaviors
 {

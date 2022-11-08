@@ -1,6 +1,7 @@
 #if USE_XR_MANAGEMENT
 
 using AUE;
+using ChainBehaviors.Utils;
 using UnityEngine;
 using UnityEngine.XR.Management;
 
