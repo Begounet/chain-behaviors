@@ -29,6 +29,15 @@ namespace ChainBehaviors.Utils
             return defaultValue;
         }
 
+        public static TReturn Get<T, TReturn>(T left, Func<T, TReturn> right)
+        {
+            if (left != null)
+            {
+                return right.Invoke(left);
+            }
+            return default;
+        }
+
         public static void Execute<T>(T left, Action callback)
         {
             if (left != null)
