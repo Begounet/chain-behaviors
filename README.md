@@ -49,14 +49,12 @@ You may also want to be careful about the number of GameObjects you are going to
 * Animation
   * `AnimatorClipPlayer`: Allow to play a specific clip on an Animator
   * `SetAnimatorParameter`: Provide a way to feed an Animator parameter via "Submit*" methods
-  
 * Audio
   * `AudioClipWaveformVisualizer`: Generate a texture representing an `AudioClip` waveform
   * `AudioListenerCaptureController`: Capture the audio from an `AudioListener` in a file
   * `AudioAmplitudesToWavData`: Convert audio raw samples (float[]) to WAV data (byte[])
   * `AudioSamplesToWavData`: Convert audio samples file to WAV data
   * `PrependWaveHeader`: Prepend WAV header to some WAV data so the WAV structure is completed
-  
 * Controls
   * Branch
     * `If`
@@ -70,45 +68,38 @@ You may also want to be careful about the number of GameObjects you are going to
   * `Gradient Color Setter`: trigger an event with a color from a gradient color, according to the normalized value passed as argument
   * `Instance Synchronizator`: instantiates a prefab attached to a GameObject. Not really a behavior, more than an utility class.
   * `Once Per Application Run`: trigger an event only once in an application run
-  
 * EventCom: use `EventListener` and `EventNotifier` to setup an event communication system.
 
   * `EventListener`: listen a `Event Notifier`
   * `EventNotifier`: allow to trigger an event that will be forwarded to subscribed `EventListener`s
-
 * Events
 
   * `MonoBehaviorLifeCycleEvents`: triggers common MonoBehavior events (like `Start`, `OnEnable`, `OnDestroy` etc.). (better with Odin Inspector)
-
 * Extractors: their specialization is to extract data from a data source and forward its results with an event.
 
   * `ExtractAudioClipName`: forward the clip name of an `AudioClip`. Useful to display audio title in a UI.
-
 * Filters: triggers event if the value passes the filter
 
   * `GameObjectFilter`
   * `ObjectHandleFilter`: really useful when using `ObjectHandle` as enum
-
 * GameObjects
 
   * `GameObjectsEnableController`: enable/disable easily several GameObjects from a bool. Make it easy to toggle GameObjects.
   * `GameObjectSwitcher`: enable/disable GameObject child according to an index. Only one child can be activated. Useful to make a tab system in UI.
-
 * Image
 
   * `Texture2DEncoder`: encode a `Texture2D` as `byte[]` (jpg, png etc.). Combine with `ByteBufferToFile` to save it as a file.
   * `Texure2DToSprite`: convert a `Texture2D` to a `Sprite`
-
+* Input System
+  * `InputActionEvent`: trigger input events (started, performed, canceled) from a single action
 * Graphics
   
   * `Graphics Settings Controller`: allow to change graphics settings
-  
 * IO
   * `Byte Buffer To File`: save a byte[] to a file
   * `Directory Deleter`
   * `File Stream Creator`
   * `Object To Asset`: save a `UnityEngine.Object` as an asset (editor only)
-  
 * Localization
 
   * `LocalizationController`: allow to act on the Localization system (like changing localization culture)
@@ -166,6 +157,11 @@ You may also want to be careful about the number of GameObjects you are going to
 * RefCounterController
 
   * `RefCounterController`: keep reference count and trigger event in consequences. Useful when multiple sources try to act on the same thing. For example, you have 2 toggles that enable one GameObject. If one is turned off, you would like to keep the GameObject enabled since it still has 1 toggle enabled (ref count = 1). Turning off the last toggle will set ref count = 0 and so the adapted event will be notified in consequence.
+
+* Scene Management
+
+
+  * `Scene Loader`: allow to load a scene (in an asynchronous way)
 
 * Text
 

@@ -6,6 +6,7 @@ namespace ChainBehaviors.Utils
         public const string ModuleAnimationPath = ModulePath + "Animation/";
         public const string ModuleControlsPath = ModulePath + "Controls/";
         public const string ModuleGraphicsPath = ModulePath + "Graphics/";
+        public const string ModuleInputSystemPath = ModulePath + "Input System/";
         public const string ModuleIOPath = ModulePath + "IO/";
         public const string ModuleEventsProxyPath = ModulePath + "EventsProxy/";
         public const string ModuleObjectProxyPath = ModulePath + "ObjectProxy/";
@@ -20,6 +21,7 @@ namespace ChainBehaviors.Utils
         public const string ModuleGameObjects = ModulePath + "GameObjects/";
         public const string ModuleLocalization = ModulePath + "Localization/";
         public const string ModuleSmartString = ModuleLocalization + "Smart String/";
+        public const string ModuleSceneManagement = ModulePath + "Scene Management/";
         public const string ModuleMath = ModulePath + "Math/";
         public const string ModuleMiscs = ModulePath + "Miscs/";
         public const string ModuleMutatorsPath = ModulePath + "Mutators/";
