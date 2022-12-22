@@ -12,7 +12,8 @@
         "Unity.RenderPipelines.Universal.Runtime",
         "Unity.Localization",
         "Unity.ResourceManager",
-        "Unity.InputSystem"
+        "Unity.InputSystem",
+        "TypeCodebase.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -2,6 +2,7 @@
 using AUE;
 using System;
 using ChainBehaviors.Utils;
+using TypeCodebase;
 
 namespace ChainBehaviors
 {
