@@ -1,4 +1,5 @@
 using ChainBehaviors.Microphone;
+using ScriptableObjectArchitecture;
 
 namespace ChainBehaviors.ScriptableObject
 {
