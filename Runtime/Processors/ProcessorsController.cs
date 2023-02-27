@@ -58,6 +58,7 @@ namespace ChainBehaviors.Processes
                 runInEditMode = _executeInEditor && enabled;
                 IsPlaying = false;
                 IsPlaying = _executeInEditor && enabled;
+                _hasBeenOverriden = false;
             }
         }
 #endif
